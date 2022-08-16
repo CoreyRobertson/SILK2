@@ -1,0 +1,285 @@
+body {
+    background-color: black;
+    color: rgba(253, 253, 253);
+}
+
+section {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    color: #818181;
+    /*background-color: black;*/
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+}
+
+h2,
+h3 {
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+}
+
+span {
+    color: #818181;
+    margin: 10px;
+}
+
+span:hover,
+span:focus {
+    transition: 0.3s;
+    color: #f1f1f1;
+}
+
+footer {
+    background-color: #818181;
+    text-align: center;
+}
+
+
+.row {
+    max-width: 100%;
+    margin: 0 !important;
+}
+
+.toggle {
+    position: fixed;
+    font-size: 40px;
+    top: 30px;
+    left: 35px;
+
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 400%;
+    font-family: 'Noto Serif Display', serif;
+}
+
+.brand-sub {
+    font-size: 150%;
+}
+
+.first-col {
+    padding: 0px !important;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    /*setting width to 100% means the navbar is expanded on load*/
+    width: 100%;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: white;
+    /* Black fallback color */
+    background-color: rgba(253, 253, 253);
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 2s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlaytitle {
+    position: relative;
+    top: 15%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: left;
+    /* Centered text/links */
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+    margin-left: 100px;
+    font-size: 200%;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 15%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: left;
+    /* Centered text/links */
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+    margin-left: 100px;
+    display: flex;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+    font-family: 'Playfair Display', serif;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.image1 img {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    object-fit: cover;
+}
+
+.about-heading {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.about-para {
+    text-align: right;
+    margin-right: 50px;
+
+}
+
+.order-heading {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.order-para {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn {
+    font-size: 20px;
+    border-radius: 10px;
+    min-width: 250px;
+    min-height: 100px;
+    background-color: #818181 !important;
+    border-color: grey !important;
+    border-width: 3px !important;
+    font-family: 'Playfair Display', serif !important;
+}
+
+.contact-buttons {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 100px;
+    color: #818181;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.contact-buttons:hover,
+.contact-buttons:focus {
+    transition: 0.3s;
+    color: #f1f1f1;
+}
+
+.copy {
+    color: white;
+    padding: 10px;
+    font-size: 75%;
+    font-family: 'Playfair Display', serif;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media (max-width: 1028px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    .brand-sub {
+        font-size: 80%;
+    }
+
+    .toggle {
+        font-size: 40px;
+        top: 15px;
+        left: 35px;
+    }
+
+    .candle-placeholder {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .carousel-img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .about-para {
+        text-align: center;
+        margin: 20px 10px;
+    }
+
+    .about-heading {
+        text-align: center;
+        margin: 20px 10px;
+
+    }
+
+    .order-heading {
+        text-align: center;
+        margin: 20px 10px;
+    }
+
+    .order-para {
+        text-align: center;
+        margin: 20px 10px;
+
+    }
+
+    .button-div {
+        padding-bottom: 100px;
+    }
+
+    .btn {
+        margin-right: 0px !important;
+    }
+
+    .contact-buttons {
+        font-size: 50px;
+    }

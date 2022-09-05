@@ -13,7 +13,7 @@ section {
     background-color: black;
     /*background-color: black;*/
     min-height: 100vh;
-    max-height: 100vh;
+    max-height: 100%;
     display: flex;
 }
 
@@ -78,7 +78,7 @@ footer {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */
     height: 100%;
     /*setting width to 100% means the navbar is expanded on load*/
-    width: 100%;
+    width: 0%;
     position: fixed;
     /* Stay in place */
     z-index: 1;
@@ -201,8 +201,7 @@ footer {
     padding-left: 179.8px;
 }
 
-.product-buttons {
-    padding: 8px;
+.product-buttons-pages {
     text-decoration: none;
     font-size: 20px;
     color: #818181;
@@ -211,30 +210,12 @@ footer {
     transition: 0.3s;
     /* Transition effects on hover (color) */
     font-family: 'Playfair Display', serif;
-    text-align: left;
+    text-align: right;
+    margin-right: 179.8px;
 }
 
-.product-buttons:hover,
-.product-buttons:focus {
-    transition: 0.3s;
-    color: #f1f1f1;
-}
-
-.contact-buttons {
-    padding: 8px 0 8px 0;
-    text-decoration: none;
-    font-size: 100px;
-    color: #818181;
-    display: block;
-    /* Display block instead of inline */
-    transition: 0.3s;
-    /* Transition effects on hover (color) */
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-}
-
-.contact-buttons:hover,
-.contact-buttons:focus {
+.product-buttons-pages:hover,
+.product-buttons-pages:focus {
     transition: 0.3s;
     color: #f1f1f1;
 }
@@ -276,6 +257,7 @@ footer {
     .candle-placeholder {
         max-width: 200px;
         max-height: 200px;
+        margin: 20px;
     }
 
     .right-para {
@@ -293,8 +275,9 @@ footer {
         padding-left: 0px;
     }
 
-    .product-buttons {
+    .product-buttons-pages {
         text-align: center;
+        margin-right: 0;
     }
 
     .left-heading {
@@ -314,9 +297,5 @@ footer {
 
     .btn {
         margin-right: 0px !important;
-    }
-
-    .contact-buttons {
-        font-size: 50px;
     }
 }
